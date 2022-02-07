@@ -1,33 +1,38 @@
 public class Truck extends Vehicle
 {
-	// loadWeight is a decimal in pounds or another applicable weight unit
-	float loadWeight;
-
-	public static void main(String[ ] args)  
-	{
-    
-	}
-
+	// loadWeight is an integer in tons
+	private int loadWeight;
 
 	// Constructors
-	public Truck()
+	public Truck(int weight)
 	{
-		super();
-	}
-	public Truck(float speed, String direction, float location, float weight)
-	{
-		super(speed, direction, location);
 		loadWeight = weight;
 	}
-
+	
+	protected void Accelerate(int secondsDelta)
+	{
+		if (loadWeight <= 5)
+			setCurrentSpeed(getCurrentSpeed() + Constants.AccRateEmpty * secondsDelta * Constants.MpsToMph);
+		else
+			setCurrentSpeed(getCurrentSpeed() + Constants.AccRateFull * secondsDelta * Constants.MpsToMph);
+	}
+	
+	protected void Decelerate(int secondsDelta)
+	{
+		if (loadWeight <= 5)
+			setCurrentSpeed(getCurrentSpeed() + Constants.DecRateEmpty * secondsDelta * Constants.MpsToMph);
+		else
+			setCurrentSpeed(getCurrentSpeed() + Constants.DecRateFull * secondsDelta * Constants.MpsToMph);
+	}
+	
 	// Setter methods
-	public void SetLoadWeight(float weight)
+	public void SetLoadWeight(int weight)
 	{
 		loadWeight = weight;
 	}
 
 	// Getter methods
-	public float getLoadWeight()
+	public int getLoadWeight()
 	{
 		return loadWeight;
 	}

@@ -1,10 +1,15 @@
 public class Car extends Vehicle
 {
-	public static void main(String[ ] args)  
+	protected void Accelerate(int secondsDelta)
 	{
-    
+		setCurrentSpeed(getCurrentSpeed() + Constants.AccRate * secondsDelta * Constants.MpsToMph);
 	}
-
+	
+	protected void Decelerate(int secondsDelta)
+	{
+		setCurrentSpeed(getCurrentSpeed() + Constants.DecRate * secondsDelta * Constants.MpsToMph);
+	}
+	
 	// Constructors
 	public Car()
 	{
