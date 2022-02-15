@@ -3,7 +3,8 @@ import java.util.*;
 public class Program {
 	public static void main(String[ ] args)  
 	{
-		ISimOutput simOutput = new MetricOutput();
+		//ISimOutput simOutput = new MetricOutput();
+		ISimOutput simOutput = new ImperialOutput();
 
 		Car car = new Car();
 		car.setDesiredSpeed(65.0);
@@ -25,6 +26,7 @@ public class Program {
 			{
 				v.updateSpeed(1);
 				String s = v.getClass().toString();
+				//System.out.println(s + " speed: " + String.format(" %.2f", simOutput.getSpeed(v)) + " kmh");
 				System.out.println(s + " speed: " + String.format(" %.2f", simOutput.getSpeed(v)) + " mph");
 			}
 		}
