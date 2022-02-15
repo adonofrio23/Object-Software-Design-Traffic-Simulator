@@ -10,19 +10,9 @@ public abstract class Vehicle extends DynamicRoadItem
 	private double currentLocation;
 
 	// Method used to cause the car to speed up
-	public void Accelerate(double toSpeed)
-	{
-
-	}
-	
 	protected abstract void Accelerate(int secondsDelta);
 
 	// Method used to cause the car to slow down
-	public void Decelerate(double toSpeed)
-	{
-
-	}
-	
 	protected abstract void Decelerate(int secondsDelta);
 
 	// Method used to turn the car a certain number of degrees in a certain direction
