@@ -12,17 +12,17 @@ public class Truck extends Vehicle
 	protected void Accelerate(int secondsDelta)
 	{
 		if (loadWeight <= 5)
-			setCurrentSpeed(getCurrentSpeed() + Constants.AccRateEmpty * secondsDelta * Constants.MpsToMph);
+			setCurrentSpeed(getCurrentSpeed() + Constants.AccRateEmpty * secondsDelta);
 		else
-			setCurrentSpeed(getCurrentSpeed() + Constants.AccRateFull * secondsDelta * Constants.MpsToMph);
+			setCurrentSpeed(getCurrentSpeed() + Constants.AccRateFull * secondsDelta);
 	}
 	
 	protected void Decelerate(int secondsDelta)
 	{
 		if (loadWeight <= 5)
-			setCurrentSpeed(getCurrentSpeed() + Constants.DecRateEmpty * secondsDelta * Constants.MpsToMph);
+			setCurrentSpeed(getCurrentSpeed() + Constants.DecRateEmpty * secondsDelta);
 		else
-			setCurrentSpeed(getCurrentSpeed() + Constants.DecRateFull * secondsDelta * Constants.MpsToMph);
+			setCurrentSpeed(getCurrentSpeed() + Constants.DecRateFull * secondsDelta);
 	}
 	
 	// Setter methods

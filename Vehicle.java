@@ -35,9 +35,9 @@ public abstract class Vehicle extends DynamicRoadItem
 	}
 
 	// Setter methods
-	public void setDesiredSpeed(double mph)
+	public void setDesiredSpeed(double mps)
 	{
-		desiredSpeed = mph;
+		desiredSpeed = mps;
 	}
 	
 	protected void setCurrentSpeed(double speed)
