@@ -10,15 +10,15 @@ public class Program {
 		String units = "";
 		Scanner input = new Scanner(System.in);
 
-		while (speedUnit != 'M' && speedUnit != 'I')
+		while (speedUnit != 'M' && speedUnit != 'm' && speedUnit != 'I' && speedUnit != 'i')
 		{
         	System.out.print("Enter 'M' for metric or 'I' for Imperial: ");
         	speedUnit = input.next().charAt(0);
-        	if(speedUnit == 'M') 
+        	if(speedUnit == 'M' || speedUnit == 'm') 
 			{
 				gui = new MetricGUI();
 				units = "kph";
-        	} else if(speedUnit =='I') 
+        	} else if(speedUnit =='I' || speedUnit == 'i') 
         	{
         		gui = new ImperialGUI();
         		units = "mph";	
@@ -26,8 +26,16 @@ public class Program {
             	System.out.println("Invalid input! Must enter 'I' or 'M'");  	
 		}
 
-		System.out.print("Enter speed limit: ");
-        speedLimit = input.nextDouble();
+		boolean validSpeedLimit = false;
+		while (validSpeedLimit == false)
+		{
+			System.out.print("Enter speed limit: ");
+        	speedLimit = input.nextDouble();
+        	if (speedLimit < 0)
+        		System.out.println("Invalid speed limit! Must be > 0.");
+        	else
+        		validSpeedLimit = true;
+        }
 
         Car car = new Car();
 		gui.setSpeedLimit(car, speedLimit);
