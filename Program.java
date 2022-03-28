@@ -3,6 +3,25 @@ import java.util.*;
 public class Program {
 	public static void main(String[ ] args)  
 	{
+		GUI simInput;
+        Map map = new Map();
+        IPrintDriver cp = new ConsolePrint();
+
+        simInput = new MetricGUI();
+        Road Uptown = simInput.CreateRoad("Uptown", 0.0, -0.09, .180, Heading.North);
+        map.AddRoad(Uptown);
+        Road Crosstown = simInput.CreateRoad("Crosstown", -0.09, 0.0, .180, Heading.East);
+        map.AddRoad(Crosstown);
+
+        CharMatrix cm = new CharMatrix();
+        map.Print(cp, cm);
+        for (int i = 0; i < Constants.CharMapSize; i++)
+        {
+            String s = new String(cm.map[i]);
+            System.out.println(s);
+        }
+
+	/*
 		GUI gui;
 		gui = null;
 		char speedUnit = ' ';
@@ -59,6 +78,16 @@ public class Program {
 				String s = v.getClass().toString();
 				System.out.println(s + " speed:" + String.format(" %.2f", gui.getSpeed(v)) + " " + units);
 			}
-        }
+        } */
+    }
+
+    public double GetSpeed(Vehicle v)
+    {
+        return v.getCurrentSpeed() * Constants.MpsToMph;
+    }
+
+    public void SetSpeedLimit(Vehicle v, double speed)
+    {
+        v.setDesiredSpeed(speed/Constants.MpsToMph);
     }
 }

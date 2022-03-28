@@ -9,4 +9,9 @@ public class MetricGUI extends GUI
 	{ 
 		v.setDesiredSpeed(s/(Constants.MpsToKph)); 
 	}
+
+	public Road CreateRoad(String name, double locX, double locY, double len, Heading hdg)
+	{
+		return new Road (name, locX/Constants.MetersToKm, locY/Constants.MetersToKm, len/Constants.MetersToKm, hdg);
+	}
 }

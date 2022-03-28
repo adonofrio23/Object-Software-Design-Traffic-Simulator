@@ -9,4 +9,9 @@ public class ImperialGUI extends GUI
 	{ 
 		v.setDesiredSpeed(s/(Constants.MpsToMph)); 
 	}
+
+	public Road CreateRoad(String name, double locX, double locY, double len, Heading hdg)
+	{
+		return new Road (name, locX/Constants.MetersToMiles, locY/Constants.MetersToMiles, len/Constants.MetersToMiles, hdg);
+	}
 }
