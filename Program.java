@@ -1,28 +1,30 @@
-import java.util.*;
+package HWWeek9;
+
+import java.io.IOException;
 
 public class Program {
-	public static void main(String[ ] args)  
-	{
+	public static void main(String[ ] args) throws IOException {
 		GUI simInput;
-        Map map = new Map();
+        Map map = Map.JsonMapLoad("/Users/Anthony/Documents/Fordham/Fordham_2021-2022/Spring_2022/Object_Software_Design/TrafficSim/src/main/java/HWWeek9/map2.json");
         IPrintDriver cp = new ConsolePrint();
 
         simInput = new MetricGUI();
-        Road Uptown = simInput.CreateRoad("Uptown", 0.0, -0.09, .180, Heading.North);
+/*
+        Road Uptown = simInput.CreateRoad("Uptown", 0.0, -0.09, .180, Road.Heading.North);
         map.AddRoad(Uptown);
-        Road Crosstown = simInput.CreateRoad("Crosstown", -0.09, 0.0, .180, Heading.East);
-        map.AddRoad(Crosstown);
+        Road Crosstown = simInput.CreateRoad("Crosstown", -0.09, 0.0, .180, Road.Heading.East);
+        map.AddRoad(Crosstown); */
 
         CharMatrix cm = new CharMatrix();
         map.Print(cp, cm);
-        for (int i = 0; i < Constants.CharMapSize; i++)
-        {
+        JsonMapSave.MapSave("/Users/Anthony/Documents/Fordham/Fordham_2021-2022/Spring_2022/Object_Software_Design/TrafficSim/src/main/java/HWWeek9/mapOutput.json");
+        for (int i = 0; i < Constants.CharMapSize; i++) {
             String s = new String(cm.map[i]);
-            System.out.println(s);
+                System.out.println(s);
         }
 
 	/*
-		GUI gui;
+		HWWeek9.GUI gui;
 		gui = null;
 		char speedUnit = ' ';
 		double speedLimit = 0;
@@ -39,7 +41,7 @@ public class Program {
 				units = "kph";
         	} else if(speedUnit =='I' || speedUnit == 'i') 
         	{
-        		gui = new ImperialGUI();
+        		gui = new HWWeek9.ImperialGUI();
         		units = "mph";	
         	} else 
             	System.out.println("Invalid input! Must enter 'I' or 'M'");  	
@@ -56,23 +58,23 @@ public class Program {
         		validSpeedLimit = true;
         }
 
-        Car car = new Car();
+        HWWeek9.Car car = new HWWeek9.Car();
 		gui.setSpeedLimit(car, speedLimit);
 
-		Truck truck1 = new Truck(4);
+		HWWeek9.Truck truck1 = new HWWeek9.Truck(4);
 		gui.setSpeedLimit(truck1, speedLimit);
 		
-		Truck truck2 = new Truck(8);
+		HWWeek9.Truck truck2 = new HWWeek9.Truck(8);
 		gui.setSpeedLimit(truck2, speedLimit);
 
-		List<Vehicle> vehicles = new ArrayList<Vehicle>();
+		List<HWWeek9.Vehicle> vehicles = new ArrayList<HWWeek9.Vehicle>();
 		vehicles.add(car);
 		vehicles.add(truck1);
 		vehicles.add(truck2); 
 
 		for (int i = 0; i < 11; i++) 
 		{
-			for (Vehicle v : vehicles) 
+			for (HWWeek9.Vehicle v : vehicles)
 			{
 				v.updateSpeed(1);
 				String s = v.getClass().toString();

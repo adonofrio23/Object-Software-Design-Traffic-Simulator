@@ -1,3 +1,7 @@
+package HWWeek9;
+
+import HWWeek9.DynamicRoadItem;
+
 public abstract class Vehicle extends DynamicRoadItem
 {
 	// currentSpeed is a decimal in MPH
@@ -27,6 +31,7 @@ public abstract class Vehicle extends DynamicRoadItem
 
 
 	}
+
 	public Vehicle(double speed, String direction, double location)
 	{
 		this.currentSpeed = speed;

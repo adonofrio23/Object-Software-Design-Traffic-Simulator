@@ -1,3 +1,5 @@
+package HWWeek9;
+
 public class CharMatrix
 {
     public char[][] map = new char[Constants.CharMapSize][];

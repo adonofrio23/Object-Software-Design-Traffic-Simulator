@@ -1,3 +1,4 @@
+package HWWeek9;
 
 public class Constants {
 	public static final double AccRate = 3.5; // Acceleration rate for cars in m/s

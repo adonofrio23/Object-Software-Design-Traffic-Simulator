@@ -1,3 +1,5 @@
+package HWWeek9;
+
 public class ImperialGUI extends GUI
 {
 	public double getSpeed(Vehicle v) 
@@ -10,8 +12,18 @@ public class ImperialGUI extends GUI
 		v.setDesiredSpeed(s/(Constants.MpsToMph)); 
 	}
 
-	public Road CreateRoad(String name, double locX, double locY, double len, Heading hdg)
+	public Road CreateRoad(String name, double locX, double locY, double len, Road.Heading hdg)
 	{
-		return new Road (name, locX/Constants.MetersToMiles, locY/Constants.MetersToMiles, len/Constants.MetersToMiles, hdg);
+		return new Road(name, locX/Constants.MetersToMiles, locY/Constants.MetersToMiles, len/Constants.MetersToMiles, hdg);
+	}
+
+	public SpeedLimit CreateSpeedLimit(double speed, double location)
+	{
+		return new SpeedLimit(speed/(Constants.MetersToMiles), location/Constants.MetersToMiles);
+	}
+
+	public StopSign CreateStopSign(double location)
+	{
+		return new StopSign(location/Constants.MetersToMiles);
 	}
 }

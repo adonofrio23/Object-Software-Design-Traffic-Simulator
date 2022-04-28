@@ -1,3 +1,5 @@
+package HWWeek9;
+
 public class Conversions
 {
     public static int WCpointToCCpoint(double val)

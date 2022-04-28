@@ -1,0 +1,102 @@
+{
+  "roads": [
+    {
+      "name": "Entry Road N",
+      "length": 20,
+      "xLocation": 79,
+      "yLocation": -93,
+      "heading": 0
+    },
+    {
+      "name": "Entry Road S",
+      "length": 20,
+      "xLocation": 75,
+      "yLocation": -73,
+      "heading": 1
+    },
+    {
+      "name": "Westside Highway N",
+      "length": 160,
+      "xLocation": 79,
+      "yLocation": -73,
+      "heading": 0
+    },
+    {
+      "name": "Westside Highway S",
+      "length": 160,
+      "xLocation": 75,
+      "yLocation": 85.999999999999986,
+      "heading": 1
+    },
+    {
+      "name": "Eastside Drive N",
+      "length": 160,
+      "xLocation": -81,
+      "yLocation": -73,
+      "heading": 0
+    },
+    {
+      "name": "Eastside Drive S",
+      "length": 160,
+      "xLocation": -77,
+      "yLocation": 86.999999999999986,
+      "heading": 1
+    },
+    {
+      "name": "Midway Way N",
+      "length": 80,
+      "xLocation": -4,
+      "yLocation": 7,
+      "heading": 0
+    },
+    {
+      "name": "Midway Way S",
+      "length": 80,
+      "xLocation": 0,
+      "yLocation": 86.999999999999986,
+      "heading": 1
+    },
+    {
+      "name": "Southern Tier Exp W",
+      "length": 160,
+      "xLocation": 79,
+      "yLocation": -72,
+      "heading": 3
+    },
+    {
+      "name": "Southern Tier Exp E",
+      "length": 160,
+      "xLocation": -81,
+      "yLocation": -76,
+      "heading": 2
+    },
+    {
+      "name": "Main Street W",
+      "length": 160,
+      "xLocation": 79,
+      "yLocation": 7,
+      "heading": 3
+    },
+    {
+      "name": "Main Street E",
+      "length": 160,
+      "xLocation": -81,
+      "yLocation": 3,
+      "heading": 2
+    },
+    {
+      "name": "Northway W",
+      "length": 160,
+      "xLocation": 79,
+      "yLocation": 86.999999999999986,
+      "heading": 3
+    },
+    {
+      "name": "North Way E",
+      "length": 160,
+      "xLocation": -81,
+      "yLocation": 83,
+      "heading": 2
+    }
+  ]
+}

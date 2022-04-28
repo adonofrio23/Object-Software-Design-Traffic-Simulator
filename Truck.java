@@ -1,3 +1,5 @@
+package HWWeek9;
+
 public class Truck extends Vehicle
 {
 	// loadWeight is an integer in tons
