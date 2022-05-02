@@ -5,19 +5,36 @@ import java.io.IOException;
 public class Program {
 	public static void main(String[ ] args) throws IOException {
 		GUI simInput;
-        Map map = Map.JsonMapLoad("/Users/Anthony/Documents/Fordham/Fordham_2021-2022/Spring_2022/Object_Software_Design/TrafficSim/src/main/java/HWWeek9/map2.json");
+        Map map = Map.JsonMapLoad("/Users/Anthony/Documents/Fordham/Fordham_2021-2022/Spring_2022/Object_Software_Design/TrafficSim/src/main/java/HWWeek9/map3.json");
         IPrintDriver cp = new ConsolePrint();
 
         simInput = new MetricGUI();
-/*
+    /*
         Road Uptown = simInput.CreateRoad("Uptown", 0.0, -0.09, .180, Road.Heading.North);
         map.AddRoad(Uptown);
         Road Crosstown = simInput.CreateRoad("Crosstown", -0.09, 0.0, .180, Road.Heading.East);
         map.AddRoad(Crosstown); */
+/*
+        Road Uptown = simInput.CreateRoad("Uptown", 0.0, -0.09, .180, Road.Heading.North);
+        map.AddRoad(Uptown);
+        Road Crosstown = simInput.CreateRoad("Crosstown", -0.09, 0.0, .180, Road.Heading.East);
+        map.AddRoad(Crosstown);
+        StopSign sign = simInput.CreateStopSign(.01);
+        Crosstown.AddRoadItem(sign);
+        StopSign sign2 = simInput.CreateStopSign(.23);
+        Uptown.AddRoadItem(sign2);
+        StopSign sign3 = simInput.CreateStopSign(.32);
+        Uptown.AddRoadItem(sign3);
+        StopSign sign4 = simInput.CreateStopSign(.302);
+        Uptown.AddRoadItem(sign4);
+        SpeedLimit limit = simInput.CreateSpeedLimit(80.0, .02);
+        Crosstown.AddRoadItem(limit);
+        SpeedLimit limit2 = simInput.CreateSpeedLimit(50.0, .123);
+        Uptown.AddRoadItem(limit2);  */
 
         CharMatrix cm = new CharMatrix();
         map.Print(cp, cm);
-        JsonMapSave.MapSave("/Users/Anthony/Documents/Fordham/Fordham_2021-2022/Spring_2022/Object_Software_Design/TrafficSim/src/main/java/HWWeek9/mapOutput.json");
+        map.JsonMapSave("/Users/Anthony/Documents/Fordham/Fordham_2021-2022/Spring_2022/Object_Software_Design/TrafficSim/src/main/java/HWWeek9/mapOutput.json");
         for (int i = 0; i < Constants.CharMapSize; i++) {
             String s = new String(cm.map[i]);
                 System.out.println(s);

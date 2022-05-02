@@ -22,7 +22,7 @@ public class Map
         Roads.add(road);
     }
 
-    /*
+
     public static Map JsonMapLoad(String path) throws IOException
     {
         String value = new String(Files.readAllBytes(Paths.get(path)));
@@ -35,12 +35,13 @@ public class Map
         Gson gson = new Gson();
         String value = gson.toJson(this);
         Files.write(Paths.get(path), value.getBytes());
-    } */
-
+    }
+/*
     public void Map Save(ISaveDriver sd, Object o)
     {
         sd.MapSave(this, o);
     }
+ */
 
     public void Print(IPrintDriver pd, Object o)
     {

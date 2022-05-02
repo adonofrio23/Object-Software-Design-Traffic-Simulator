@@ -7,9 +7,10 @@ public class StopSign extends StaticRoadItem
 
     StopSign(double mm)
     {
-        super(mm);
+        mileMarker = mm;
     }
+
     // Figure out how to implement this
-    void Save(ISaveDriver *sd, ostream& stream) override;
+    //void Save(ISaveDriver *sd, ostream& stream) override;
 
 }	

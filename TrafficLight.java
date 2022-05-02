@@ -6,6 +6,6 @@ public class TrafficLight extends DynamicRoadItem
 {
     public TrafficLight(double mm)
     {
-        super(mm);
+        mileMarker = mm;
     }
 }	

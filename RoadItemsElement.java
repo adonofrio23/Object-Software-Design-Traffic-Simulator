@@ -1,9 +1,9 @@
 package HWWeek9;
 
 public class RoadItemsElement {
-    private RoadItem currRoadItem;
-    private RoadItem prevRoadItem;
-    private RoadItem nextRoadItem;
+    private RoadItem roadItem;
+    private RoadItemsElement prevRoadItem;
+    private RoadItemsElement nextRoadItem;
 
     private void addNext(RoadItem roadItem)
     {
@@ -15,23 +15,30 @@ public class RoadItemsElement {
 
     }
 
-    public RoadItemsElement()
+    public RoadItemsElement(RoadItem ri, RoadItemsElement prev, RoadItemsElement next)
     {
-
+        roadItem = ri;
+        prevRoadItem = prev;
+        nextRoadItem = next;
     }
 
-    public RoadItem getCurrRoadItem()
+    public RoadItem getRoadItem()
     {
-        return currRoadItem;
+        return roadItem;
     }
 
-    public RoadItem getPrevRoadItem()
+    public RoadItemsElement getPrevRoadItem()
     {
         return prevRoadItem;
     }
 
-    public RoadItem getNextRoadItem()
+    public RoadItemsElement getNextRoadItem()
     {
         return nextRoadItem;
+    }
+
+    public void addNew(RoadItem roadItem)
+    {
+
     }
 }

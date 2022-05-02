@@ -6,7 +6,7 @@ public class SpeedLimit extends StaticRoadItem
 
     public SpeedLimit(double speed, double location)
     {
-        super(location);
+        mileMarker = location;
         SpeedLimit = speed;
     }
 

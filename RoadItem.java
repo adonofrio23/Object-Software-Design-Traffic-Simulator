@@ -2,23 +2,51 @@ package HWWeek9;
 
 public class RoadItem
 {
-    protected double MileMarker = 0.0;
+    protected RoadItem previousItem;
+    protected RoadItem nextItem;
 
-    public RoadItem(double mm)
+    protected double mileMarker = 0.0;
+    private Road currentRoad;
+
+    public double GetMileMarker()
     {
-        MileMarker = mm;
+        return mileMarker;
     }
 
-    public double getMileMarker()
+    public void SetMileMarker(double distance)
     {
-        return MileMarker;
+        mileMarker = distance;
     }
 
-    void setMileMarker(double mm)
+    public Road GetCurrentRoad()
     {
-        MileMarker = mm;
+        return currentRoad;
+    }
+
+    public void SetCurrentRoad(Road road)
+    {
+        currentRoad = road;
+    }
+
+    public RoadItem GetPrevious()
+    {
+        return previousItem;
+    }
+    public RoadItem GetNext()
+    {
+        return nextItem;
+    }
+
+    public void SetPrevious(RoadItem item)
+    {
+        previousItem = item;
+    }
+
+    public void SetNext(RoadItem item)
+    {
+        nextItem = item;
     }
 
     // Implement this
-    virtual void Save(ISaveDriver *sd, ostream& stream) = 0;
+    //virtual void Save(ISaveDriver *sd, ostream& stream) = 0;
 }	

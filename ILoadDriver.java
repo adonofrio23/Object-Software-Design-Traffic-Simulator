@@ -7,5 +7,5 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public interface ILoadDriver {
-    public abstract Map MapLoad(String path) throws IOException;
+    //public Map MapLoad(String path) throws IOException;
 }
