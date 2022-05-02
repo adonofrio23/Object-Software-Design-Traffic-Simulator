@@ -9,7 +9,7 @@ public class Car extends Vehicle
 	
 	protected void Decelerate(int secondsDelta)
 	{
-		setCurrentSpeed(getCurrentSpeed() + Constants.DecRate * secondsDelta);
+		setCurrentSpeed(getCurrentSpeed() - Constants.DecRate * secondsDelta);
 	}
 	
 	// Constructors
