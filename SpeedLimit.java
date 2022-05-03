@@ -2,11 +2,11 @@ package HWWeek9;
 
 public class SpeedLimit extends StaticRoadItem
 {
-    private double SpeedLimit;
+    protected double SpeedLimit;
 
     public SpeedLimit(double speed, double location)
     {
-        mileMarker = location;
+        MileMarker = location;
         SpeedLimit = speed;
     }
 

@@ -5,17 +5,18 @@ public class RoadItem
     protected RoadItem previousItem;
     protected RoadItem nextItem;
 
-    protected double mileMarker = 0.0;
+    protected double MileMarker = 0.0;
+    // protected Object type;
     private Road currentRoad;
 
     public double GetMileMarker()
     {
-        return mileMarker;
+        return MileMarker;
     }
 
     public void SetMileMarker(double distance)
     {
-        mileMarker = distance;
+        MileMarker = distance;
     }
 
     public Road GetCurrentRoad()

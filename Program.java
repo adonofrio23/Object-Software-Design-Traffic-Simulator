@@ -9,6 +9,8 @@ public class Program {
         IPrintDriver cp = new ConsolePrint();
 
         simInput = new MetricGUI();
+
+        // Instantiate Simulator somewhere with traffic lights and update messages
     /*
         Road Uptown = simInput.CreateRoad("Uptown", 0.0, -0.09, .180, Road.Heading.North);
         map.AddRoad(Uptown);

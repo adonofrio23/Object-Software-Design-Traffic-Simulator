@@ -3,6 +3,7 @@ package HWWeek9;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Road
 {
@@ -17,26 +18,26 @@ public class Road
         West
     }
 
-	private RoadItem head;
+	// private RoadItem head;
     private String Name;
     private double Length;
     private double XLocation;
     private double YLocation;
     private Heading Heading;
-    // private ArrayList<RoadItem> RoadItems;
+    private List<Object> RoadItems;
     public static int NumOfRoads = 0;
 
     public Road(String streetName, double locX, double locY, double len, Heading hdg /*, ArrayList<RoadItem> RiArray*/)
     {
-        head = new RoadItem();
+        /* head = new RoadItem();
         head.SetPrevious(null);
-        head.SetNext(null);
+        head.SetNext(null); */
         Name = streetName;
         Length = len;
         Heading = hdg;
         XLocation = locX;
         YLocation = locY;
-        //RoadItems = RiArray;
+        RoadItems = new ArrayList<Object>();
         NumOfRoads++;
     }
 
@@ -65,6 +66,7 @@ public class Road
         return Name;
     }
 
+    /*
     public void AddRoadItem(RoadItem roadItem)
     {
         roadItem.SetCurrentRoad(this);
@@ -81,11 +83,31 @@ public class Road
            InsertNewItemAfter(currentItem, roadItem);
         }
 
+    public void AddRoadItem(RoadItem roadItem)
+    {
+        if (RoadItems.size() == 0)
+            RoadItems.add(0, roadItem);
+
+        for(int i = 0; i < RoadItems.size(); i++)
+        {
+            if (RoadItems.get(i).mileMarker < roadItem.mileMarker)
+            {
+                RoadItems.add(i, roadItem);
+            }
+        }
+    }
+*/
+    public void AddRoadItem(Object roadItem)
+    {
+        RoadItems.add(roadItem);
+    }
+
     public void Print(IPrintDriver print, Object o)
     {
         print.PrintRoad(this, o);
     }
 
+    /*
     private void InsertNewItemBefore(RoadItem current, RoadItem newItem)
     {
         newItem.SetPrevious(current.GetPrevious());
@@ -101,5 +123,5 @@ public class Road
         newItem.SetPrevious(current);
         if (newItem.GetNext() != null)
             newItem.GetNext().SetPrevious(newItem);
-    }
+    } */
 }

@@ -5,9 +5,9 @@ import HWWeek9.StaticRoadItem;
 public class StopSign extends StaticRoadItem
 {
 
-    StopSign(double mm)
+    public StopSign(double mm)
     {
-        mileMarker = mm;
+        MileMarker = mm;
     }
 
     // Figure out how to implement this
