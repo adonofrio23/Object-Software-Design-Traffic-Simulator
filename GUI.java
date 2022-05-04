@@ -9,4 +9,5 @@ public abstract class GUI implements ISimInput, ISimOutput
 	public abstract Road CreateRoad(String name, double locX, double locY, double len, Road.Heading hdg /*, ArrayList<RoadItem> RiArray */);
 	public abstract SpeedLimit CreateSpeedLimit(double speed, double location);
 	public abstract StopSign CreateStopSign(double location);
+	public abstract TrafficLight CreateTrafficLight(int rTime, int yTime, int gTime, TrafficLight.Color lit, String name, double location);
 }

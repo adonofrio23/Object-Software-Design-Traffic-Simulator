@@ -21,4 +21,9 @@ public class Car extends Vehicle
 	{
 		super(speed, direction, location);
 	}
+
+	public void Update(int seconds)
+	{
+
+	}
 }	

@@ -1,5 +1,7 @@
 package HWWeek9;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,9 +19,11 @@ public class Simulation
         DynamicRoadItems.add(dri);
     }
 
-    // How do I send an update message to each dynamic road item?
     public void Update(int seconds)
     {
-
+        for (DynamicRoadItem dri: DynamicRoadItems)
+        {
+            dri.Update(seconds);
+        }
     }
 }	
