@@ -1,4 +1,4 @@
-package HWWeek9;
+package TrafficSimulator;
 
 public class Truck extends Vehicle
 {

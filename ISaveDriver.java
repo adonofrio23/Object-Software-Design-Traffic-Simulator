@@ -1,11 +1,5 @@
-package HWWeek9;
-
-import com.google.gson.Gson;
-
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+package TrafficSimulator;
 
 public interface ISaveDriver {
-    // public void MapSave(String path) throws IOException;
+
 }

@@ -1,6 +1,4 @@
-package HWWeek9;
-
-import com.google.gson.annotations.SerializedName;
+package TrafficSimulator;
 
 import java.util.ArrayList;
 import java.util.List;

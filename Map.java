@@ -1,4 +1,4 @@
-package HWWeek9;
+package TrafficSimulator;
 
 import com.google.gson.Gson;
 
@@ -36,12 +36,6 @@ public class Map
         String value = gson.toJson(this);
         Files.write(Paths.get(path), value.getBytes());
     }
-/*
-    public void Map Save(ISaveDriver sd, Object o)
-    {
-        sd.MapSave(this, o);
-    }
- */
 
     public void Print(IPrintDriver pd, Object o)
     {

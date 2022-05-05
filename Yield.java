@@ -1,6 +1,4 @@
-package HWWeek9;
-
-import HWWeek9.StaticRoadItem;
+package TrafficSimulator;
 
 public class Yield extends StaticRoadItem
 {

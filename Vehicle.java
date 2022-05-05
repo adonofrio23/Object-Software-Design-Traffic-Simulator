@@ -1,6 +1,4 @@
-package HWWeek9;
-
-import HWWeek9.DynamicRoadItem;
+package TrafficSimulator;
 
 public abstract class Vehicle extends DynamicRoadItem
 {

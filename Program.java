@@ -1,4 +1,4 @@
-package HWWeek9;
+package TrafficSimulator;
 
 import java.io.IOException;
 

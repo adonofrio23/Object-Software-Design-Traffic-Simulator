@@ -1,6 +1,5 @@
-package HWWeek9;
+package TrafficSimulator;
 
-import HWWeek9.DynamicRoadItem;
 import com.google.gson.annotations.SerializedName;
 
 public class TrafficLight extends DynamicRoadItem

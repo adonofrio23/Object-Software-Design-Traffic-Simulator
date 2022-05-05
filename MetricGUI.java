@@ -1,6 +1,4 @@
-package HWWeek9;
-
-import java.util.ArrayList;
+package TrafficSimulator;
 
 public class MetricGUI extends GUI
 {
@@ -14,9 +12,9 @@ public class MetricGUI extends GUI
 		v.setDesiredSpeed(s/(Constants.MpsToKph));
 	}
 
-	public Road CreateRoad(String name, double locX, double locY, double len, Road.Heading hdg /*, ArrayList<RoadItem> RiArray*/)
+	public Road CreateRoad(String name, double locX, double locY, double len, Road.Heading hdg)
 	{
-		return new Road(name, locX/Constants.MetersToKm, locY/Constants.MetersToKm, len/Constants.MetersToKm, hdg /*, RiArray*/);
+		return new Road(name, locX/Constants.MetersToKm, locY/Constants.MetersToKm, len/Constants.MetersToKm, hdg);
 	}
 
 	public SpeedLimit CreateSpeedLimit(double speed, double location)
